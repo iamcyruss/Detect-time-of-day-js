@@ -1,0 +1,39 @@
+function displayTimeOfDayPage() {
+   var currentTime = new Date();
+   var hours = currentTime.getHours();
+
+   if (hours >= 0 && hours < 12) {
+      // morning
+      window.location = "morning.html";
+   } else if (hours >= 12 && hours < 18) {
+      // afternoon
+      window.location = "afternoon.html";
+   } else {
+      // evening
+      window.location = "evening.html";
+   }
+}
+This code defines a JavaScript function called displayTimeOfDayPage() that uses the Date object to get the current time and the window.location property to redirect 
+the user to a different page depending on the time of day. The function checks the value of the hours variable, which represents the current hour in the 24-hour time 
+format, and redirects the user to a different page depending on whether it is morning, afternoon, or evening. You can customize this code to display different pages 
+and adjust the time ranges as needed. Additionally, you can call this function when the page loads or when a specific event occurs, such as when the user clicks a 
+button or links to a page.
+
+<html>
+   <head>
+      <title>My Time-Based Website</title>
+   </head>
+   <body onload="displayTimeOfDayPage()">
+      <h1>Welcome to My Time-Based Website!</h1>
+      <p>This website displays different content depending on the time of day. When you load this page, the time of day will be detected and you will be redirected 
+      to the appropriate page.</p>
+   </body>
+</html>
+
+This code adds the onload="displayTimeOfDayPage()" attribute to the <body> element of the HTML page. This specifies that the displayTimeOfDayPage() function should 
+be called when the page loads. The function will then execute and redirect the user to the appropriate page based on the time of day. You can customize this code to 
+call other functions or to add more content and features to your HTML page.
+
+
+
+
